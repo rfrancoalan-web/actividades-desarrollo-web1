@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'Sora';
+    src: url(./fuentes/Sora-Regular.ttf);
+}
+
+/* ---------- Selectores de TIPO (primero: menor especificidad) ---------- */
+
+/* Modelo de caja alternativo: width/height incluyen padding y borde */
+* {
+    box-sizing: border-box;
+}
+
+/* Reset de márgenes y rellenos por defecto del navegador */
+html,
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Tipografía del proyecto en el elemento raíz: la heredan todos los elementos */
+html {
+    font-family: Sora, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+/* Un solo color para header y footer: se declara una vez para no repetir reglas */
+header,
+footer {
+    background-color: #999999;
+}
+
+a {
+    color: #333333;
+}
+
+/* ---------- Selectores de CLASE (después: mayor especificidad) ---------- */
+
+/* Cabecera (3 reglas) */
+/* display:flex hace que los hijos directos (logo y nav) se ubiquen en fila;
+   space-between los separa a los extremos y align-items los centra verticalmente */
+.cabecera-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* El SVG original es muy grande: se limita su alto */
+.cabecera-principal a img {
+    height: 40px;
+}
+
+.cabecera-principal nav a {
+    margin-left: 10px;
+}
+
+/* Contenido principal (3 reglas) */
+.contenido-principal {
+    padding: 10px;
+}
+
+.contenido-principal img {
+    width: 300px;
+    max-width: 100%;
+}
+
+/* label en bloque para que cada campo del formulario quede en su propia línea */
+.contenido-principal label {
+    display: block;
+}
+
+/* Pie (3 reglas) */
+.pie-principal {
+    padding: 10px;
+}
+
+.pie-principal p {
+    font-size: 0.9rem;
+}
+
+.pie-principal .copyright {
+    text-align: center;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retiro Sustentable - Catálogo</title>
+    <link rel="stylesheet" href="recursos/css/index.css">
+</head>
+<body>
+    <!-- <header> en lugar de <div>: indica que es la cabecera del sitio (semántica y accesibilidad) -->
+    <header class="cabecera-principal">
+        <!-- El logo es un enlace a index.html. El atributo alt mejora la accesibilidad (lectores de pantalla)
+             y muestra una descripción de la imagen si no puede cargarse -->
+        <a href="./index.html">
+            <img src="./recursos/imagenes/logo-rs.svg" alt="Logo de Retiro Sustentable">
+        </a>
+        <!-- <nav> agrupa el menú principal; es el mismo en ambas páginas -->
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <a href="./reservas.html">Reservas</a>
+        </nav>
+    </header>
+    <!-- <main>: contenido principal único de la página. Esta página es MPA (SSR), buena para SEO -->
+    <main class="contenido-principal">
+        <!-- Un solo <h1> por página: corregido, antes había dos -->
+        <h1>Catálogo de Cabañas</h1>
+        <p>Bienvenido a Retiro Sustentable, cabañas al pie de la montaña en San Javier, Traslasierras, Córdoba.</p>
+        <!-- <section> agrupa el listado y lleva su propio título -->
+        <section>
+            <h2>Cabañas para alquiler</h2>
+            <!-- <article>: cada cabaña es un contenido independiente -->
+            <article>
+                <h3>Cabaña 1</h3>
+                <img src="./recursos/imagenes/modelo1.webp" alt="Cabaña 1 entre las sierras">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero doloribus aperiam quisquam.</p>
+                <p>Precio por día: $ 50000</p>
+                <a href="./reservas.html">Reservar</a>
+            </article>
+            <article>
+                <h3>Cabaña 2</h3>
+                <img src="./recursos/imagenes/modelo2.webp" alt="Cabaña 2 entre las sierras">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero doloribus aperiam quisquam.</p>
+                <p>Precio por día: $ 55000</p>
+                <a href="./reservas.html">Reservar</a>
+            </article>
+            <article>
+                <h3>Cabaña 3</h3>
+                <img src="./recursos/imagenes/modelo3.webp" alt="Cabaña 3 entre las sierras">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero doloribus aperiam quisquam.</p>
+                <p>Precio por día: $ 60000</p>
+                <a href="./reservas.html">Reservar</a>
+            </article>
+            <article>
+                <h3>Cabaña 4</h3>
+                <img src="./recursos/imagenes/modelo4.webp" alt="Cabaña 4 entre las sierras">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero doloribus aperiam quisquam.</p>
+                <p>Precio por día: $ 65000</p>
+                <a href="./reservas.html">Reservar</a>
+            </article>
+        </section>
+    </main>
+    <!-- <footer> en lugar de <div>: pie de página del sitio -->
+    <footer class="pie-principal">
+        <p class="copyright">&copy; 2026 Retiro Sustentable. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

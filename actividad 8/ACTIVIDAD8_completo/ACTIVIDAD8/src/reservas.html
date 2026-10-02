@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retiro Sustentable - Reservas</title>
+    <link rel="stylesheet" href="recursos/css/index.css">
+</head>
+<body>
+    <!-- Mismo layout y menú que index.html: header, main y footer -->
+    <header class="cabecera-principal">
+        <!-- Logo como enlace a index.html; alt para accesibilidad y por si la imagen no carga -->
+        <a href="./index.html">
+            <img src="./recursos/imagenes/logo-rs.svg" alt="Logo de Retiro Sustentable">
+        </a>
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <a href="./reservas.html">Reservas</a>
+        </nav>
+    </header>
+    <!-- Esta página es la parte SPA (CSR): el formulario se valida y actualiza sin recargar el sitio completo -->
+    <main class="contenido-principal">
+        <h1>Reservas</h1>
+        <h2>Contactanos</h2>
+        <!-- action: a dónde se envían los datos / method post: los datos viajan en el cuerpo del pedido -->
+        <form action="./reservas.html" method="post">
+            <!-- Cada label se asocia a su campo con for = id del input (accesibilidad y más área de clic) -->
+            <label for="id-nombre">Nombre</label>
+            <input type="text" name="nombre" id="id-nombre" required>
+            <!-- type="tel" y type="email" ayudan al navegador a validar y mostrar el teclado correcto -->
+            <label for="id-telefono">Teléfono</label>
+            <input type="tel" name="telefono" id="id-telefono" required>
+            <label for="id-email">Email</label>
+            <input type="email" name="email" id="id-email" required>
+            <label for="id-desde">Fecha desde</label>
+            <input type="date" name="desde" id="id-desde" required>
+            <label for="id-hasta">Fecha hasta</label>
+            <input type="date" name="hasta" id="id-hasta" required>
+            <!-- El comentario es opcional, por eso no lleva required -->
+            <label for="id-comentario">Comentario</label>
+            <textarea name="comentario" id="id-comentario"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer class="pie-principal">
+        <p class="copyright">&copy; 2026 Retiro Sustentable. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
