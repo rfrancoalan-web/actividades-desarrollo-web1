@@ -1,0 +1,91 @@
+/* Tipografía del proyecto (misma que se usó en clase) */
+@font-face {
+    font-family: Nunito;
+    src: url(./fuentes/Nunito-Regular.ttf);
+}
+
+/* ---------- Reseteo básico ---------- */
+/* Modelo de caja alternativo: el padding y el borde quedan dentro del ancho */
+* {
+    box-sizing: border-box;
+}
+
+/* Se quitan los márgenes y rellenos que trae el navegador */
+html,
+body,
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- Selectores de TIPO (estilo global) ---------- */
+html {
+    font-family: Nunito, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* header y footer comparten color */
+header,
+footer {
+    background-color: #999999;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+/* ---------- Selectores de CLASE (bloques del layout) ---------- */
+
+/* Cabecera */
+.cabecera-principal {
+    padding: 10px;
+}
+
+.cabecera-principal nav a {
+    margin-right: 10px;
+}
+
+/* Contenido principal */
+.contenido-principal {
+    padding: 10px;
+}
+
+/* Selectores combinados: afectan solo a los elementos dentro del main */
+.contenido-principal h1,
+.contenido-principal h2,
+.contenido-principal p {
+    margin-bottom: 10px;
+}
+
+.contenido-principal ul {
+    margin-bottom: 10px;
+}
+
+/* Solo campos de texto, select y textarea (no radios ni botón) */
+.contenido-principal form .campo-texto,
+.contenido-principal form select,
+.contenido-principal form textarea {
+    width: 300px;
+    border: 1px solid #999999;
+}
+
+/* Pie principal */
+.pie-principal {
+    padding: 10px;
+}
